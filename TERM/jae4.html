@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>재현 경로 4</title>
+    <style>
+        .label {margin-bottom: 96px;}
+        .label * {display: inline-block;vertical-align: top;}
+        .label .left {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_l.png") no-repeat;display: inline-block;height: 24px;overflow: hidden;vertical-align: top;width: 7px;}
+        .label .center {background: url(https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_bg.png) repeat-x;display: inline-block;height: 24px;font-size: 15px;line-height: 24px;}
+        .label .right {background: url("https://t1.daumcdn.net/localimg/localimages/07/2011/map/storeview/tip_r.png") -1px 0  no-repeat;display: inline-block;height: 24px;overflow: hidden;width: 6px;}
+        </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Dancing+Script&family=Questrial&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@1,300&family=Grey+Qo&family=Nanum+Gothic&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative&family=Zen+Kaku+Gothic+Antique:wght@300&display=swap" rel="stylesheet">
+    <link href="style1.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/21fb5fa45e.js" crossorigin="anonymous"></script>
+
+</head>
+<body>
+<!-- 지도를 표시할 div 입니다 -->
+<div id="map"> </div>
+
+<script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=469181da5df1adaac6f121b17c5dacf5"></script>
+<script>
+var mapContainer = document.getElementById('map'), // 지도를 표시할 div 
+    mapOption = { 
+        center: new kakao.maps.LatLng( 37.616756211528504 , 127.07027035656634), // 지도의 중심좌표
+        level: 4 // 지도의 확대 레벨
+    };
+
+// 지도를 표시할 div와  지도 옵션으로  지도를 생성합니다
+
+var map = new kakao.maps.Map(mapContainer, mapOption); // 지도를 생성합니다
+
+var imageSrc = 'https://i.ibb.co/HgQfPq5/home-house-3526.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(30, 30), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(30, 10)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng( 37.6188751781397 , 127.04922689339384); // 마커가 표시될 위치입니다
+
+// 마커를 생성합니다
+var marker1 = new kakao.maps.Marker({
+    position: markerPosition, 
+    image: markerImage // 마커이미지 설정 
+});
+var imageSrc = 'https://i.ibb.co/gJrKtrg/school-icon-126269.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(60, 60), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(30, 10)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.58678144526218, 127.09782791283799); // 마커가 표시될 위치입니다
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition, 
+    image: markerImage // 마커이미지 설정 
+});
+var imageSrc = 'https://i.ibb.co/zH9fNSv/147.png', // 마커이미지의 주소입니다    
+    imageSize = new kakao.maps.Size(80, 50), // 마커이미지의 크기입니다
+    imageOption = {offset: new kakao.maps.Point(30, 30)}; // 마커이미지의 옵션입니다. 마커의 좌표와 일치시킬 이미지 안에서의 좌표를 설정합니다.
+      
+// 마커의 이미지정보를 가지고 있는 마커이미지를 생성합니다
+var markerImage = new kakao.maps.MarkerImage(imageSrc, imageSize, imageOption),
+    markerPosition = new kakao.maps.LatLng(37.61444122197059 , 127.05178370723726); // 마커가 표시될 위치입니다
+
+// 마커를 생성합니다
+var marker2 = new kakao.maps.Marker({
+    position: markerPosition, 
+    image: markerImage // 마커이미지 설정 
+});
+
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map); 
+marker1.setMap(map);  
+marker2.setMap(map); 
+
+var markerPosition  = new kakao.maps.LatLng(37.61767072475382 , 127.04772247199458); 
+
+// 마커를 생성합니다
+var marker = new kakao.maps.Marker({
+    position: markerPosition
+});
+var markerPosition  = new kakao.maps.LatLng(37.610877654316205 , 127.0570108915856); 
+
+// 마커를 생성합니다
+var marker1 = new kakao.maps.Marker({
+    position: markerPosition
+});
+var markerPosition  = new kakao.maps.LatLng(37.61767863697147 , 127.07567125715015); 
+
+// 마커를 생성합니다
+var marker2 = new kakao.maps.Marker({
+    position: markerPosition
+});
+var markerPosition  = new kakao.maps.LatLng(37.58073810950315 , 127.08849469179597); 
+
+// 마커를 생성합니다
+var marker3 = new kakao.maps.Marker({
+    position: markerPosition
+});
+var markerPosition  = new kakao.maps.LatLng(37.58644956632309 , 127.09535693851765); 
+
+// 마커를 생성합니다
+var marker4 = new kakao.maps.Marker({
+    position: markerPosition
+});
+
+37.61757134858893 , 127.04837935965128
+// 마커가 지도 위에 표시되도록 설정합니다
+marker.setMap(map);
+marker1.setMap(map);
+marker2.setMap(map);
+marker3.setMap(map);
+marker4.setMap(map);
+
+
+var content = '<div class ="label"><span class="left"></span><span class="center"> 5분 </span><span class="right"></span></div>';
+
+// 커스텀 오버레이가 표시될 위치입니다 
+var position = new kakao.maps.LatLng(37.61757134858893 , 127.04837935965128);  
+
+// 커스텀 오버레이를 생성합니다
+var customOverlay = new kakao.maps.CustomOverlay({
+    position: position,
+    content: content   
+});
+var content = '<div class ="label"><span class="left"></span><span class="center"> 14분 </span><span class="right"></span></div>';
+
+// 커스텀 오버레이가 표시될 위치입니다 
+var position = new kakao.maps.LatLng(37.61444122197059 , 127.05178370723726);  
+
+// 커스텀 오버레이를 생성합니다
+var customOverlay1 = new kakao.maps.CustomOverlay({
+    position: position,
+    content: content   
+});
+customOverlay.setMap(map);
+
+var content = '<div class ="label"><span class="left"></span><span class="center"> 4분 </span><span class="right"></span></div>';
+
+// 커스텀 오버레이가 표시될 위치입니다 
+var position = new kakao.maps.LatLng(37.61418189607675 , 127.06591866206591);  
+
+// 커스텀 오버레이를 생성합니다
+var customOverlay2 = new kakao.maps.CustomOverlay({
+    position: position,
+    content: content   
+});
+
+// 커스텀 오버레이를 지도에 표시합니다
+customOverlay.setMap(map);
+customOverlay1.setMap(map);
+customOverlay2.setMap(map);
+
+var linePath = [
+    new kakao.maps.LatLng(37.61870179111215 , 127.04909935127527),
+    new kakao.maps.LatLng (37.61867917431285 , 127.04932021119315),
+    new kakao.maps.LatLng (37.61843157712447 , 127.04890095327433),
+    new kakao.maps.LatLng (37.61797689268173 , 127.04813609609336),
+    new kakao.maps.LatLng (37.61776526653515 , 127.04787544386572),
+    new kakao.maps.LatLng (37.617593959006456 , 127.04816982946781),
+    new kakao.maps.LatLng (37.617467873809865 , 127.0480394907478),
+    new kakao.maps.LatLng(37.61767072475382 , 127.04772247199458)
+
+    
+];
+
+// 지도에 표시할 선을 생성합니다
+var polyline = new kakao.maps.Polyline({
+    path: linePath, // 선을 구성하는 좌표배열 입니다
+    strokeWeight: 5, // 선의 두께 입니다
+    strokeColor: '#121212', // 선의 색깔입니다
+    strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+    strokeStyle: 'solid' // 선의 스타일입니다
+});
+var linePath = [
+    new kakao.maps.LatLng(37.61767072475382 , 127.04772247199458),
+    new kakao.maps.LatLng (37.61426932261524 , 127.05338058833574),
+    new kakao.maps.LatLng(37.610861885645775 , 127.0570137109802)
+
+    
+];
+
+// 지도에 표시할 선을 생성합니다
+var polyline1 = new kakao.maps.Polyline({
+    path: linePath, // 선을 구성하는 좌표배열 입니다
+    strokeWeight: 5, // 선의 두께 입니다
+    strokeColor: '#0D20EB', // 선의 색깔입니다
+    strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+    strokeStyle: 'solid' // 선의 스타일입니다
+});
+var linePath = [
+    new kakao.maps.LatLng(37.61052427298218, 127.05634569739263),
+    new kakao.maps.LatLng(37.61414563298672, 127.06323705818573),
+    new kakao.maps.LatLng(37.61761363808291, 127.07560291344227),
+    new kakao.maps.LatLng(37.618310705345465, 127.07535256115627)
+];
+
+// 지도에 표시할 선을 생성합니다
+var polyline2 = new kakao.maps.Polyline({
+    path: linePath, // 선을 구성하는 좌표배열 입니다
+    strokeWeight: 5, // 선의 두께 입니다
+    strokeColor: '#1EC823', // 선의 색깔입니다
+    strokeOpacity: 1, // 선의 불투명도 입니다 1에서 0 사이의 값이며 0에 가까울수록 투명합니다
+    strokeStyle: 'solid' // 선의 스타일입니다
+});
+
+
+// 지도에 선을 표시합니다 
+polyline.setMap(map); 
+polyline1.setMap(map);
+polyline2.setMap(map);  
+
+
+
+
+
+function mess(){
+alert(" WALK를 선택해 주세요 ")
+}
+function mess1(){
+alert(" 버스나 지하철 경로를 선택해주세요 ")
+}
+function mess2(){
+alert(" 이동수단으로 지하철까지 이동후 선택가능합니다 ")
+}
+function mess3(){
+alert(" 돌아서 가는 경로는 제외합니다 ")
+}
+
+
+</script>
+<div id="name">
+    <a href="jae1.html" >박재현</a>
+</div>
+<div id="button">
+    <!--<ul>
+        <li><a href="walk.html" target="_blank">WALK</a></li>
+        <li><a href="bus2.html" target="_blank">BUS</a></li>
+        <li><a href="" target="_blank">SUBWAY</a></li>
+    
+    </ul>
+-->
+<div id="but-1">
+    <form>
+        <a href="" onclick="mess1()" >WALK   <i class="fas fa-walking"></i></a>
+        <br><br><br>
+    </form>
+</div>
+</form>
+<div id="but-2">
+    <form>
+        <a href="" onclick="mess3()">BUS   <i class="fas fa-bus"></i></a>
+        <br><br><br>
+    </form>
+</div>
+<div id="but-3">
+    <form>
+        <a href="jae5.html" >SUBWAY   <i class="fas fa-subway"></i></a>
+    </form>
+</div>
+</div>
+</body>
+</html>

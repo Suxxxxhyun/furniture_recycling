@@ -1,0 +1,193 @@
+h3{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 65px;
+    position: relative;
+    top:48px;
+    left: 20%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+
+
+
+.menu{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 25px;
+    position: relative;
+    left:60%;
+}
+
+.container{
+    position:absolute;
+    left:52%;
+    top:18%;
+    transform: translate(-50%,-50%);
+}
+
+.menu li{
+    display: inline-block;
+    margin: 0 25px;
+    height: 100px;
+}
+
+.menu {
+    list-style: none;
+    width: 600px;
+}
+
+.menu li a{
+    text-decoration: none;
+    position: relative;
+}
+
+.menu li a::before{
+    content:'';
+    background-color: black;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -5%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.menu li a:hover::before{
+    width: 100%;
+}
+
+
+
+
+
+body, ul, h2, p {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style-type: none;
+}
+
+body {
+    background-color: #FEFEFE;
+    color: #999;
+}
+
+.member {
+    margin-top: 80px;;
+    height: 600px;
+    background: linear-gradient( #e8e7d2, #e8e7d2 calc(70% + 100px),#c9ba9b calc(30% - 100px), #c9ba9b);
+    display: flex;
+
+    height: 80vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.team-item {
+    flex-basis: 300px;
+    flex-shrink: 0;
+    margin: 0 10px;
+  
+    transition: all .4s;
+}
+
+.team-item:hover {
+    opacity: 1;
+    flex-basis: 350px;
+    margin: 0 30px;
+}
+
+.team-item img {
+    width: 100%; 
+}
+
+.efwd {
+    position: absolue;
+    font-size: 65px;
+}
+
+
+.teammember{
+    position: absolute;
+    font-size: 50px;    
+    left: 40%;
+    top: 30%;
+}
+
+.profile {
+    
+    position: relative;
+    overflow: hidden;
+}
+
+.profile:before {
+    content: ' ';
+
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 200px;
+}
+
+.profile_hong {
+    color: #917B56;
+}
+
+.profile_dan {
+    color: #917B56;
+}
+
+.profile_park {
+    color: #917B56;
+}
+
+.profile_jeong {
+    color: #917B56;
+}
+
+.profile_jong {
+    color: #917B56;
+}
+
+.profile-contents {
+    position: absoute;
+    left: 0;
+    bottom: 0;
+    padding: 10px;
+}
+
+.profile-contents h2 {
+    font-size: 20px;
+}
+
+.profile-contents h2 span {
+    display: block;
+    font-size: 15px;
+}
+
+.profile-contents p {
+   
+    color: #917B56;
+    font-size: 15px;
+    min-width: 140px;
+    max-height: 100;
+   
+    line-height: 1.2;
+    transition: all 1s;
+   
+}

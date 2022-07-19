@@ -1,0 +1,302 @@
+html,body{
+    margin:0;
+    padding:0;
+}
+
+a{
+    color: inherit;
+    text-decoration: none;
+}
+h1,p{
+    margin:0;
+}
+
+#contents{
+    position:absolute;
+    width:100%;
+    text-align: center;
+    top:30%;
+}
+
+#contents h1{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 100px;
+    margin-bottom:23px;
+    color:white;
+}
+
+#contents p{
+    font-size: 23px;
+    margin-bottom: 40px;
+    color:white
+}
+
+#contents a{
+    display : inline-block;
+    border : 2px solid white ;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size:30px;
+    font-weight: bold;
+    color:white;
+
+}
+#main{
+    font-family: 'Questrial', sans-serif;
+}
+
+@media(max-width:769px){
+    #contents p{
+        font-size: 20px;
+    }
+    #contents h1{
+        font-size: 50px;
+    }
+    #contents a{
+        font-size:14px;
+    }
+
+}
+
+.menu{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    font-size: 25px;
+    position: relative;
+    left:60%;
+}
+
+.container{
+    position:absolute;
+    left:52%;
+    top:18%;
+    transform: translate(-50%,-50%);
+}
+
+.menu li{
+    display: inline-block;
+    margin: 0 25px;
+    height: 100px;
+}
+
+.menu {
+    list-style: none;
+    width: 600px;
+}
+
+.menu li a{
+    text-decoration: none;
+    position: relative;
+}
+
+.menu li a::before{
+    content:'';
+    background-color: black;
+    width: 0%;
+    height: 2px;
+    position: absolute;
+    left: 50%;
+    bottom: -5%;
+    transform: translateX(-50%);
+    transition: 0.3s;
+}
+
+.menu li a:hover::before{
+    width: 100%;
+}
+
+h2{
+    font-family: 'Cinzel Decorative', cursive;
+    font-size: 65px;
+    position: relative;
+    top:48px;
+    left: 20%;
+    display: flex;
+    justify-content: space-between;
+
+}
+
+body{
+    overflow: hidden;
+}
+.login-form{
+    font-family: 'Zen Kaku Gothic Antique', sans-serif;
+    position: absolute;
+    top:55%;
+    right:13%;
+    transform: translate(-20%, -40%);
+    width: 400px;
+    background-color:#ffffdd;
+    border-radius: 10px;
+}
+
+.login-form h3{
+    text-align: center;
+    padding: 0 0 20px 0;
+    border-bottom: 1px solid silver;
+    font-size: 25px;
+}
+
+.login-form form{
+    padding: 0 40px;
+    box-sizing: border-box;
+}
+
+form .txt_field{
+    position: relative;
+    border-bottom: 2px solid #adadad;
+    margin: 30px 0;
+}
+
+.txt_field input{
+    width: 100%;
+    padding: 0 5px;
+    height: 40px;
+    font-size: 16px;
+    border:none;
+    background: none;
+    outline: none;
+}
+
+.txt_field label{
+    position: absolute;
+    top:50%;
+    left:5px;
+    color:#adadad;
+    transform: translateY(-50%);
+    font-size: 16px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.txt_field span::before{
+    content: '';
+    position: absolute;
+    top:40px;
+    left:0;
+    width:100%;
+    height: 2px;
+    background:#adadad;
+    transition: .5s;
+}
+
+.txt_field input:focus ~ label,
+.txt_field input:valid ~ label{
+    top : -5px;
+    color: #2691d9;
+}
+
+.txt_field input:focus ~ span,
+.txt_field input:valid ~ span::before{
+    width: 100%;
+}
+
+.pass{
+    margin: -5px 0 20px 5px;
+    color: #a6a6a6;
+    cursor: pointer;
+}
+
+.pass:hover{
+    text-decoration: underline;
+}
+
+input[type="submit"]{
+    width: 100%;
+    height: 50px;
+    border: solid 0px;
+    background:#fddfdf;
+    border-radius: 25px;
+    font-size: 18px;
+    color:black;
+    font-weight: 700;
+    cursor: pointer;
+    outline: none;
+
+}
+
+input[type="submit"]:hover{
+    border-color:black;
+    transition: .5s;
+}
+
+.signup_link{
+    margin: 15px 0;
+    text-align: center;
+    font-size: 16px;
+    color:#666666;
+}
+
+.signup_link a{
+    color: #2691d9;
+    text-decoration: none;
+}
+
+.signup_link a:hover{
+    text-decoration: underline;
+}
+
+.searchArea{
+    position: absolute;
+    top:7%;
+    right:15.5%;
+    background: #fddfdf;
+    padding: 5px;
+}
+
+.searchArea > form > input {
+    border:none;
+    width: 180px;
+    height: 25px;
+    background: rgba(0,0,0,0,0);
+    padding-left: 10px;
+}
+
+.searchArea > form > span{
+    width: 50px;
+    color:black;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+
+.bg{
+    margin-top: 100px;;
+    height: 600px;
+    background: linear-gradient(to right, #bff2ed, #bff2ed calc(50% + 100px), #feb6a0 calc(50% - 100px), #feb6a0);
+}
+
+.intro_text{
+    width: 700px;
+    position: absolute;
+    left:10%;
+    top:50%;
+    text-align: right;
+    padding: 10px;
+    z-index: 1;
+}
+.intro_text > h4,
+.intro_text > h5 {
+    margin-left: 650%;
+    line-height: 10px;
+    margin: 80px auto;
+    font-size: 60px;
+}
+
+.intro_text > h4 {
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.intro_text > h5 {
+    font-family: 'Cinzel Decorative', cursive;
+}
+
+.rectangle{
+    box-sizing: border-box;
+    width:650px;
+    height: 380px;
+    background-color : #f7f8f9;
+    margin: 40px ;
+    position: absolute;
+    margin-left: 15%;
+    margin-top: 7%;
+}
